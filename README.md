@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rayane Terki — Portfolio
+
+Personal portfolio site for **Rayane Terki**, Full-Stack Engineer focused on backend systems, AI integration, and security. Built as a Linux-terminal-themed single-page experience with a full project archive, resume, and contact section.
+
+**Live:** [portdolio-beta.vercel.app](https://portdolio-beta.vercel.app)
+
+## Tech Stack
+
+- [Next.js 15](https://nextjs.org) (App Router)
+- [React 19](https://react.dev) + [TypeScript](https://www.typescriptlang.org)
+- [Tailwind CSS 4](https://tailwindcss.com)
+- [Framer Motion](https://www.framer.com/motion/) — UI animations
+- [GSAP](https://gsap.com) + [Lenis](https://lenis.darkroom.engineering) — scroll-driven effects and smooth scroll
+- Deployed on [Vercel](https://vercel.com)
+
+## Features
+
+- Terminal / Linux-OS themed design system with light and dark modes
+- Home page: hero, impact marquee, system stack ("neofetch"), tech experience ("career.log"), and a featured project archive
+- Dedicated pages: `/about`, `/services`, `/projects`, `/learning-journey`
+- Command palette (`⌘K` / `Ctrl+K`) for quick navigation
+- Downloadable CV, contact form (EmailJS), SEO metadata & JSON-LD structured data
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view it locally.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env.local` with:
 
-## Learn More
+```bash
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=
+```
 
-To learn more about Next.js, take a look at the following resources:
+> Note: `npm install` requires `legacy-peer-deps` (already configured via `.npmrc`) due to an unrelated peer dependency conflict between `better-auth` and `drizzle-orm` in the dependency tree.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+npm run start
+```
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+src/
+├── app/               # Next.js App Router pages
+├── components/
+│   ├── sections/      # Page sections (hero, projects, footer, ...)
+│   ├── ui/             # Reusable UI primitives
+│   └── seo/            # Structured data / breadcrumbs
+public/
+├── projects/           # Project screenshots
+└── resume.pdf          # Downloadable CV
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contact
+
+- Email: [rayaneterki55@gmail.com](mailto:rayaneterki55@gmail.com)
+- GitHub: [@trrayane](https://github.com/trrayane)
+- LinkedIn: [rayane-terki](https://www.linkedin.com/in/rayane-terki-334b19378/)
