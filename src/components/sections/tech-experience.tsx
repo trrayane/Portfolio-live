@@ -10,47 +10,30 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-// Synced from LinkedIn work history (last updated: session — July 2026)
 const experiences = [
   {
     id: "01",
-    date: "APR 2026 — PRES",
-    title: "Software Engineer",
-    company: "Script Shock",
+    date: "2024 — PRES",
+    title: "Backend Developer",
+    company: "Freelance",
     status: "ACTIVE",
-    desc: "Working across front-end development and database administration, building and maintaining features on-site as part of the engineering team.",
+    desc: "Designing and building APIs and backend architecture — Node.js, Python, PostgreSQL, MongoDB — for production apps across healthcare, e-commerce, and legal-tech projects.",
   },
   {
     id: "02",
-    date: "APR 2024 — PRES",
-    title: "Software Engineer",
+    date: "2024 — PRES",
+    title: "Full-Stack Developer",
     company: "Freelance",
     status: "ACTIVE",
-    desc: "Building and maintaining websites for independent clients — from PostgreSQL-backed data layers and Prisma ORM integration to full deployment.",
+    desc: "Shipping complete products end to end — React/Next.js frontends wired to custom backends, auth, databases, and deployment — for independent clients.",
   },
   {
     id: "03",
-    date: "FEB 2025 — FEB 2026",
-    title: "Frontend Web Developer",
-    company: "SnovaTech",
-    status: "COMPLETED",
-    desc: "Delivered front-end features for a solar simulation platform using Next.js, remote, improving UI consistency and performance across the app.",
-  },
-  {
-    id: "04",
-    date: "FEB 2024 — JAN 2025",
-    title: "Web Developer",
-    company: "Kara Automobile",
-    status: "COMPLETED",
-    desc: "On-site web development role supporting the company's digital presence and internal documentation workflows.",
-  },
-  {
-    id: "05",
-    date: "JUL 2023 — SEP 2024",
-    title: "Full-Stack Developer",
-    company: "Ultra Light",
-    status: "COMPLETED",
-    desc: "Led development of Ultra Light's corporate website using Laravel — architecting a custom web application focused on performance, scalability, and security, with a responsive, user-friendly design.",
+    date: "2025 — PRES",
+    title: "AI Engineer",
+    company: "Freelance",
+    status: "ACTIVE",
+    desc: "Integrating LLM and ML features into real products — Gemini, LangChain, and OpenAI-based pipelines for summarization, generation, and AI-assisted workflows.",
   },
 ];
 

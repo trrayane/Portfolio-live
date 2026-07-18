@@ -4,35 +4,35 @@ import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import {
   SiTypescript,
-  SiGnubash,
+  SiJavascript,
+  SiPython,
   SiReact,
   SiNextdotjs,
   SiTailwindcss,
-  SiRedux,
+  SiVite,
   SiExpress,
+  SiFastapi,
   SiPostgresql,
   SiMongodb,
-  SiRedis,
   SiLinux,
   SiDocker,
-  SiKubernetes,
   SiGit,
   SiGithubactions,
-  SiNginx,
-  SiNeovim,
+  SiBurpsuite,
   SiWireshark,
+  SiKalilinux,
 } from "react-icons/si";
 import { Database, Shield, Terminal } from "lucide-react";
 
 const NEOFETCH_INFO = [
   { label: "os", value: "Arch Linux x86_64" },
-  { label: "host", value: "NODE_DZ" },
-  { label: "kernel", value: "software-engineer-5.0" },
-  { label: "uptime", value: "4+ years coding" },
+  { label: "host", value: "TRRAYANE" },
+  { label: "kernel", value: "software-engineer-2.0" },
+  { label: "uptime", value: "2+ years coding" },
   { label: "shell", value: "zsh" },
   { label: "wm", value: "Hyprland" },
   { label: "terminal", value: "Neovim" },
-  { label: "repos", value: "244 public // 443 stars" },
+  { label: "repos", value: "github.com/trrayane" },
 ];
 
 const SWATCHES = [
@@ -45,7 +45,8 @@ const STACK_CATEGORIES = [
     label: "Languages",
     items: [
       { name: "TypeScript", icon: SiTypescript },
-      { name: "Bash", icon: SiGnubash },
+      { name: "JavaScript", icon: SiJavascript },
+      { name: "Python", icon: SiPython },
       { name: "SQL", icon: Database },
     ],
   },
@@ -55,16 +56,16 @@ const STACK_CATEGORIES = [
       { name: "React", icon: SiReact },
       { name: "Next.js", icon: SiNextdotjs },
       { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "Redux", icon: SiRedux },
+      { name: "Vite", icon: SiVite },
     ],
   },
   {
     label: "Backend & Databases",
     items: [
-      { name: "Express", icon: SiExpress },
+      { name: "Node.js / Express", icon: SiExpress },
+      { name: "FastAPI", icon: SiFastapi },
       { name: "PostgreSQL", icon: SiPostgresql },
       { name: "MongoDB", icon: SiMongodb },
-      { name: "Redis", icon: SiRedis },
     ],
   },
   {
@@ -72,19 +73,16 @@ const STACK_CATEGORIES = [
     items: [
       { name: "Linux", icon: SiLinux },
       { name: "Docker", icon: SiDocker },
-      { name: "Kubernetes", icon: SiKubernetes },
       { name: "Git", icon: SiGit },
       { name: "GitHub Actions", icon: SiGithubactions },
-      { name: "Nginx", icon: SiNginx },
-      { name: "Neovim", icon: SiNeovim },
     ],
   },
   {
     label: "Security & Network",
     items: [
+      { name: "Burp Suite", icon: SiBurpsuite },
       { name: "Wireshark", icon: SiWireshark },
-      { name: "Metasploit", icon: Shield },
-      { name: "Burp Suite", icon: Shield },
+      { name: "Kali Linux", icon: SiKalilinux },
       { name: "Nmap", icon: Shield },
     ],
   },
