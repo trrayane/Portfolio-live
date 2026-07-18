@@ -7,7 +7,7 @@ import {
   SiDotnet,
   SiGit,
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiJavascript,
   SiTypescript,
 } from "react-icons/si";
@@ -46,7 +46,7 @@ const stages = [
 
 const parallelTrack = [
   { icon: SiHtml5, name: "HTML" },
-  { icon: SiCss3, name: "CSS" },
+  { icon: SiCss, name: "CSS" },
   { icon: SiJavascript, name: "JavaScript" },
   { icon: SiTypescript, name: "TypeScript" },
   { icon: SiGit, name: "Git & GitHub" },

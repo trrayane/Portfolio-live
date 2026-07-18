@@ -14,7 +14,7 @@ const projects: Project[] = [
   {
     title: "Healy",
     category: "Healthcare • Multi-Role Platform",
-    image: "/og-image.png",
+    image: "/projects/healy.png",
     link: "https://github.com/trrayane/Healy-Front",
     github: "https://github.com/trrayane/Healy-Front",
     desc: "Multi-role medical platform frontend (patient, doctor, pharmacist, caregiver, admin) with AI-assisted diagnosis, real-time messaging, and appointment management.",
@@ -29,7 +29,7 @@ const projects: Project[] = [
   {
     title: "Healy Mobile",
     category: "Healthcare • Mobile App",
-    image: "/og-image.png",
+    image: "/projects/healy-mobile.png",
     link: "https://github.com/trrayane/Healy-Mobile",
     github: "https://github.com/trrayane/Healy-Mobile",
     desc: "React Native / Expo companion app bringing the Healy patient-doctor workflow to mobile.",
@@ -44,7 +44,7 @@ const projects: Project[] = [
   {
     title: "JusticePath",
     category: "LegalTech • AI Assistant",
-    image: "/og-image.png",
+    image: "/projects/justicepath.png",
     link: "https://github.com/trrayane/JusticePath-front",
     github: "https://github.com/trrayane/JusticePath-front",
     desc: "Frontend of an intelligent legal-assistance platform for Algerian citizens, with a rich document editor and AI chat assistant.",
@@ -89,7 +89,7 @@ const projects: Project[] = [
   {
     title: "Jingle AI",
     category: "AI Audio • Hackathon Project",
-    image: "/og-image.png",
+    image: "/projects/jingle-ai.png",
     link: "https://github.com/trrayane/Hackiwha3.0",
     github: "https://github.com/trrayane/Hackiwha3.0",
     desc: "Turns a short brand brief into a fully produced audio jingle — Gemini writes lyrics and performs vocals, MusicGen composes the instrumental.",

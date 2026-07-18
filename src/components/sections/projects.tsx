@@ -9,7 +9,7 @@ const projects = [
   {
     title: "Healy",
     category: "Healthcare • Multi-Role Platform",
-    image: "/og-image.png",
+    image: "/projects/healy.png",
     link: "https://github.com/trrayane/Healy-Front",
     github: "https://github.com/trrayane/Healy-Front",
     details:
@@ -19,7 +19,7 @@ const projects = [
   {
     title: "Healy Mobile",
     category: "Healthcare • Mobile App",
-    image: "/og-image.png",
+    image: "/projects/healy-mobile.png",
     link: "https://github.com/trrayane/Healy-Mobile",
     github: "https://github.com/trrayane/Healy-Mobile",
     details:
@@ -29,7 +29,7 @@ const projects = [
   {
     title: "JusticePath",
     category: "LegalTech • AI Assistant",
-    image: "/og-image.png",
+    image: "/projects/justicepath.png",
     link: "https://github.com/trrayane/JusticePath-front",
     github: "https://github.com/trrayane/JusticePath-front",
     details:
@@ -59,7 +59,7 @@ const projects = [
   {
     title: "Jingle AI",
     category: "AI Audio • Hackathon Project",
-    image: "/og-image.png",
+    image: "/projects/jingle-ai.png",
     link: "https://github.com/trrayane/Hackiwha3.0",
     github: "https://github.com/trrayane/Hackiwha3.0",
     details:
