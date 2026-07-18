@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight, ExternalLink, Github, Terminal, X } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Github, Terminal } from "lucide-react";
 
 const projects = [
   {
@@ -85,22 +85,17 @@ function ProjectRow({
   index,
   active,
   onActivate,
-  onOpen,
 }: {
   project: Project;
   index: number;
   active: boolean;
   onActivate: () => void;
-  onOpen: () => void;
 }) {
   return (
     <button
       onMouseEnter={onActivate}
       onFocus={onActivate}
-      onClick={() => {
-        onActivate();
-        onOpen();
-      }}
+      onClick={onActivate}
       className="w-full text-left px-5 md:px-6 py-5 border-b last:border-b-0 transition-colors group"
       style={{
         borderColor: "var(--border-subtle)",
@@ -144,19 +139,7 @@ function ProjectRow({
 
 export default function MyProjects() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [mobileOpen, setMobileOpen] = useState(false);
   const active = projects[activeIndex];
-
-  useEffect(() => {
-    if (mobileOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [mobileOpen]);
 
   return (
     <section
@@ -214,15 +197,14 @@ export default function MyProjects() {
                     index={i}
                     active={i === activeIndex}
                     onActivate={() => setActiveIndex(i)}
-                    onOpen={() => setMobileOpen(true)}
                   />
                 ))}
               </div>
             </div>
           </div>
 
-          {/* Sticky preview pane — desktop only, single fixed frame so every image crops consistently */}
-          <div className="hidden lg:block lg:col-span-7 lg:order-2">
+          {/* Sticky preview pane — single fixed frame, so every image crops consistently */}
+          <div className="lg:col-span-7 order-1 lg:order-2">
             <div className="lg:sticky lg:top-32">
               <div
                 className="border rounded-xl overflow-hidden"
@@ -343,101 +325,6 @@ export default function MyProjects() {
           </a>
         </div>
       </div>
-
-      {/* Mobile project detail — simple full-screen modal */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="lg:hidden fixed inset-0 z-[200] overflow-y-auto"
-            style={{ backgroundColor: "var(--bg-base)" }}
-          >
-            <button
-              onClick={() => setMobileOpen(false)}
-              className="fixed top-4 right-4 z-[210] flex items-center justify-center w-10 h-10 rounded-full"
-              style={{ backgroundColor: "rgba(255,255,255,0.95)", color: "#0a0a0e", boxShadow: "0 4px 16px rgba(0,0,0,0.35)" }}
-              aria-label="Close"
-            >
-              <X size={20} strokeWidth={2.5} />
-            </button>
-
-            <div>
-                <div className="relative aspect-[16/10] w-full overflow-hidden" style={{ backgroundColor: "var(--bg-chrome)" }}>
-                  <Image
-                    src={active.image}
-                    alt={active.title}
-                    fill
-                    sizes="100vw"
-                    className="object-cover"
-                  />
-                  <div
-                    className="absolute inset-0"
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(to top, var(--bg-base) 0%, color-mix(in srgb, var(--bg-base) 10%, transparent) 35%, transparent 65%)",
-                    }}
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 z-[1]">
-                    <span className="font-technical text-[9px] text-blue-400 uppercase tracking-[0.3em] block mb-2">
-                      {active.category}
-                    </span>
-                    <h3
-                      className="text-3xl font-black uppercase tracking-tighter leading-none"
-                      style={{ color: "var(--text-primary)" }}
-                    >
-                      {active.title}
-                    </h3>
-                  </div>
-                </div>
-
-                <div className="p-6 space-y-6">
-                  <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-                    {active.details}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {active.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="text-[10px] font-mono px-2 py-1 rounded border"
-                        style={{ color: "var(--text-secondary)", backgroundColor: "var(--bg-surface-strong)", borderColor: "var(--border-subtle)" }}
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex gap-3 pt-2 pb-4">
-                    <a
-                      href={active.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 py-4 rounded-full font-bold uppercase tracking-widest text-xs"
-                      style={{ backgroundColor: "var(--text-primary)", color: "var(--bg-base)" }}
-                    >
-                      {active.link === active.github ? "View Repo" : "Live Demo"}{" "}
-                      {active.link === active.github ? <Github size={14} /> : <ExternalLink size={14} />}
-                    </a>
-                    {active.github !== "#" && active.github !== active.link && (
-                      <a
-                        href={active.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-shrink-0 flex items-center justify-center w-14 h-14 border rounded-full"
-                        style={{ backgroundColor: "var(--bg-surface-strong)", borderColor: "var(--border-subtle)", color: "var(--text-secondary)" }}
-                      >
-                        <Github size={18} />
-                      </a>
-                    )}
-                  </div>
-                </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 }
