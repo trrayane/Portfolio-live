@@ -101,6 +101,21 @@ const projects: Project[] = [
       outcome: "A working end-to-end pipeline generating a finished, mixed jingle from just a brand brief, built during a hackathon.",
     },
   },
+  {
+    title: "Portfolio v1",
+    category: "Personal • Developer Portfolio",
+    image: "/projects/portfolio-v1.png",
+    link: "https://rayane-portfolio-eight.vercel.app/",
+    github: "#",
+    desc: "An earlier personal portfolio built with React, Vite, and Tailwind CSS, featuring a code-editor-styled hero and animated skill sections.",
+    tech: ["React", "Vite", "Tailwind CSS"],
+    year: "2025",
+    caseStudy: {
+      problem: "Needed a personal site to showcase projects and skills before settling on this current terminal-themed design.",
+      approach: "Built a React + Vite + Tailwind single-page portfolio with a typewriter hero, animated skill cards, and a project gallery.",
+      outcome: "A live, working personal portfolio that served as the foundation before this redesign.",
+    },
+  },
 ];
 
 export default function ProjectsPage() {

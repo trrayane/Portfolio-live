@@ -66,6 +66,16 @@ const projects = [
       "Turns a short brand brief into a fully produced audio jingle — Gemini writes lyrics and performs vocals, MusicGen composes the instrumental, mixed automatically into a finished track.",
     tech: ["FastAPI", "React", "Vite", "PostgreSQL", "Gemini TTS"],
   },
+  {
+    title: "Portfolio v1",
+    category: "Personal • Developer Portfolio",
+    image: "/projects/portfolio-v1.png",
+    link: "https://rayane-portfolio-eight.vercel.app/",
+    github: "#",
+    details:
+      "An earlier personal portfolio — React + Vite + Tailwind CSS, with a code-editor-styled hero, animated skill sections, and a project showcase.",
+    tech: ["React", "Vite", "Tailwind CSS"],
+  },
 ];
 
 type Project = (typeof projects)[number];
