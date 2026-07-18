@@ -356,6 +356,15 @@ export default function MyProjects() {
               className="absolute inset-0 bg-black/70 backdrop-blur-sm"
               onClick={() => setMobileOpen(false)}
             />
+            <button
+              onClick={() => setMobileOpen(false)}
+              className="fixed top-4 right-4 z-[210] flex items-center justify-center w-10 h-10 rounded-full"
+              style={{ backgroundColor: "rgba(255,255,255,0.95)", color: "#0a0a0e", boxShadow: "0 4px 16px rgba(0,0,0,0.35)" }}
+              aria-label="Close"
+            >
+              <X size={20} strokeWidth={2.5} />
+            </button>
+
             <motion.div
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
@@ -368,15 +377,6 @@ export default function MyProjects() {
               <div className="flex justify-center pt-3 pb-1 flex-shrink-0">
                 <span className="w-10 h-1 rounded-full" style={{ backgroundColor: "var(--border-strong)" }} />
               </div>
-
-              <button
-                onClick={() => setMobileOpen(false)}
-                className="absolute top-4 right-4 z-10 p-2 rounded-full border"
-                style={{ backgroundColor: "var(--bg-surface)", borderColor: "var(--border-default)", color: "var(--text-primary)" }}
-                aria-label="Close"
-              >
-                <X size={18} />
-              </button>
 
               <div className="overflow-y-auto flex-1">
                 <div className="relative aspect-[16/10] w-full overflow-hidden" style={{ backgroundColor: "var(--bg-chrome)" }}>
