@@ -344,45 +344,27 @@ export default function MyProjects() {
         </div>
       </div>
 
-      {/* Mobile project detail — full-screen bottom-sheet modal */}
+      {/* Mobile project detail — simple full-screen modal */}
       <AnimatePresence>
         {mobileOpen && (
-          <div className="lg:hidden fixed inset-0 z-[200]">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.25 }}
-              className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="lg:hidden fixed inset-0 z-[200] overflow-y-auto"
+            style={{ backgroundColor: "var(--bg-base)" }}
+          >
+            <button
               onClick={() => setMobileOpen(false)}
-            />
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              transition={{ type: "spring", damping: 32, stiffness: 320 }}
-              onClick={() => setMobileOpen(false)}
-              className="fixed right-4 z-[210] flex items-center justify-center w-10 h-10 rounded-full"
-              style={{ top: "calc(26% - 20px)", backgroundColor: "rgba(255,255,255,0.95)", color: "#0a0a0e", boxShadow: "0 4px 16px rgba(0,0,0,0.35)" }}
+              className="fixed top-4 right-4 z-[210] flex items-center justify-center w-10 h-10 rounded-full"
+              style={{ backgroundColor: "rgba(255,255,255,0.95)", color: "#0a0a0e", boxShadow: "0 4px 16px rgba(0,0,0,0.35)" }}
               aria-label="Close"
             >
               <X size={20} strokeWidth={2.5} />
-            </motion.button>
+            </button>
 
-            <motion.div
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "100%" }}
-              transition={{ type: "spring", damping: 32, stiffness: 320 }}
-              className="absolute inset-x-0 bottom-0 rounded-t-2xl overflow-hidden flex flex-col"
-              style={{ top: "26%", backgroundColor: "var(--bg-base)", boxShadow: "var(--shadow-elevated)" }}
-            >
-              {/* Drag handle */}
-              <div className="flex justify-center pt-3 pb-1 flex-shrink-0">
-                <span className="w-10 h-1 rounded-full" style={{ backgroundColor: "var(--border-strong)" }} />
-              </div>
-
-              <div className="overflow-y-auto flex-1">
+            <div>
                 <div className="relative aspect-[16/10] w-full overflow-hidden" style={{ backgroundColor: "var(--bg-chrome)" }}>
                   <Image
                     src={active.image}
@@ -452,9 +434,8 @@ export default function MyProjects() {
                     )}
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
     </section>
