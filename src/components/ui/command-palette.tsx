@@ -14,6 +14,7 @@ import {
   Mail,
   Download,
   Github,
+  Linkedin,
   CornerDownLeft,
   ArrowUp,
   ArrowDown,
@@ -113,6 +114,14 @@ function buildCommands(): CommandItem[] {
       keywords: ["github", "code", "source", "repos"],
       icon: Github,
       run: () => window.open("https://github.com/trrayane", "_blank"),
+    },
+    {
+      id: "linkedin",
+      label: "Open LinkedIn",
+      hint: "open linkedin.com/in/rayane-terki-334b19378",
+      keywords: ["linkedin", "profile", "network"],
+      icon: Linkedin,
+      run: () => window.open("https://www.linkedin.com/in/rayane-terki-334b19378/", "_blank"),
     },
   ];
 }

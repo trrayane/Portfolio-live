@@ -22,6 +22,7 @@ export default function JsonLd() {
     email: "rayaneterki55@gmail.com",
     sameAs: [
       "https://github.com/trrayane",
+      "https://www.linkedin.com/in/rayane-terki-334b19378/",
     ],
     knowsAbout: [
       "Node.js",

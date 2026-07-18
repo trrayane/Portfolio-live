@@ -3,11 +3,12 @@
 import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Github, Mail, Send, Loader2 } from "lucide-react";
+import { Github, Linkedin, Mail, Send, Loader2 } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/trrayane", label: "Github" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/rayane-terki-334b19378/", label: "LinkedIn" },
   { icon: Mail, href: "mailto:rayaneterki55@gmail.com", label: "Email" },
 ];
 
