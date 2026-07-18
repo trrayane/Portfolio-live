@@ -10,30 +10,41 @@ export const metadata: Metadata = {
 
 const journey = [
   {
-    year: "2024 — PRES",
-    role: "Full-Stack Engineer",
+    year: "2025 — PRES",
+    role: "AI Engineer",
     company: "Freelance",
     status: "ACTIVE",
-    description: "Building and maintaining production applications for independent clients — from backend architecture and APIs to AI-integrated features and full deployment.",
+    description: "Integrating LLM and ML features into real products — Gemini, LangChain, and OpenAI-based pipelines for summarization, generation, and AI-assisted workflows.",
   },
   {
-    year: "2023 — 2024",
+    year: "2024 — PRES",
+    role: "Full-Stack Developer",
+    company: "Freelance",
+    status: "ACTIVE",
+    description: "Shipping complete products end to end — React/Next.js frontends wired to custom backends, auth, databases, and deployment — for independent clients.",
+  },
+  {
+    year: "2024 — PRES",
     role: "Backend Developer",
-    company: "Independent Projects",
-    status: "COMPLETED",
-    description: "Delivered backend systems and distributed services using Node.js, TypeScript, and Python, with a focus on security and reliability.",
+    company: "Freelance",
+    status: "ACTIVE",
+    description: "Designing and building APIs and backend architecture — Node.js, Python, PostgreSQL, MongoDB — for production apps across healthcare, e-commerce, and legal-tech projects.",
   },
 ];
 
-const education = {
-  school: "Self-Directed & Continuous Learning",
-  degree: "Software Engineering, Backend Systems & Security",
-  date: "ONGOING",
-  skills: "Backend Architecture, APIs, Distributed Systems, AI/LLM Integration",
-};
-
-const certifications = [
-  { name: "Docker Foundations Professional Certificate", issuer: "Docker, Inc.", date: "2025" },
+const education = [
+  {
+    degree: "Master's in Computer Science",
+    school: "USTHB — Université des Sciences et de la Technologie Houari Boumediene",
+    date: "2026 — PRES",
+    skills: "Backend Architecture, APIs, Distributed Systems, AI/LLM Integration",
+  },
+  {
+    degree: "Licence in Computer Science",
+    school: "USTHB — Université des Sciences et de la Technologie Houari Boumediene",
+    date: "2023 — 2026",
+    skills: "Software Engineering Fundamentals, Algorithms, Systems, Web Development",
+  },
 ];
 
 const expertise = [
@@ -124,41 +135,23 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="pt-16 mt-16 border-t grid grid-cols-1 lg:grid-cols-2 gap-8" style={{ borderColor: "var(--border-default)" }}>
-          <div>
-            <span className="text-[10px] font-technical tracking-[0.4em] md:tracking-[0.6em] uppercase block mb-4" style={{ color: "var(--text-tertiary)" }}>
-              Education
-            </span>
-            <div className="p-6 md:p-8 border rounded-xl hover:border-blue-500/20 transition-colors" style={{ backgroundColor: "var(--bg-surface)", borderColor: "var(--border-default)" }}>
-              <h3 className="text-lg md:text-xl font-bold mb-1" style={{ color: "var(--text-primary)" }}>{education.degree}</h3>
-              <p className="font-technical text-xs mb-3" style={{ color: "var(--text-muted)" }}>{education.school}</p>
-              <p className="text-sm mb-3" style={{ color: "var(--text-secondary)" }}>{education.date}</p>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>{education.skills}</p>
-            </div>
-          </div>
-
-          <div>
-            <span className="text-[10px] font-technical tracking-[0.4em] md:tracking-[0.6em] uppercase block mb-4" style={{ color: "var(--text-tertiary)" }}>
-              Certifications
-            </span>
-            <div className="space-y-4">
-              {certifications.map((cert) => (
-                <div
-                  key={cert.name}
-                  className="p-6 border rounded-xl hover:border-blue-500/20 transition-colors"
-                  style={{ backgroundColor: "var(--bg-surface)", borderColor: "var(--border-default)" }}
-                >
-                  <h3 className="text-base md:text-lg font-bold mb-1" style={{ color: "var(--text-primary)" }}>{cert.name}</h3>
-                  <p className="font-technical text-xs" style={{ color: "var(--text-muted)" }}>{cert.issuer} · Issued {cert.date}</p>
-                </div>
-              ))}
-            </div>
-            <a
-              href="/learning-journey"
-              className="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-400 hover:text-blue-300 transition-colors"
-            >
-              See ongoing self-study →
-            </a>
+        <section className="pt-16 mt-16 border-t" style={{ borderColor: "var(--border-default)" }}>
+          <span className="text-[10px] font-technical tracking-[0.4em] md:tracking-[0.6em] uppercase block mb-4" style={{ color: "var(--text-tertiary)" }}>
+            Education
+          </span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {education.map((item) => (
+              <div
+                key={item.degree}
+                className="p-6 md:p-8 border rounded-xl hover:border-blue-500/20 transition-colors"
+                style={{ backgroundColor: "var(--bg-surface)", borderColor: "var(--border-default)" }}
+              >
+                <h3 className="text-lg md:text-xl font-bold mb-1" style={{ color: "var(--text-primary)" }}>{item.degree}</h3>
+                <p className="font-technical text-xs mb-3" style={{ color: "var(--text-muted)" }}>{item.school}</p>
+                <p className="text-sm mb-3" style={{ color: "var(--text-secondary)" }}>{item.date}</p>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>{item.skills}</p>
+              </div>
+            ))}
           </div>
         </section>
       </div>
