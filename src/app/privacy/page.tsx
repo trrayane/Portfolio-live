@@ -4,8 +4,8 @@ import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Rouabah Zine Eddine",
-  description: "Learn how your data is handled and protected when you visit the official portfolio of Rouabah Zine Eddine.",
+  title: "Privacy Policy | Rayane Terki",
+  description: "Learn how your data is handled and protected when you visit the official portfolio of Rayane Terki.",
 };
 
 export default function PrivacyPage() {
@@ -54,7 +54,7 @@ export default function PrivacyPage() {
           <section className="mb-12">
             <h2 className="text-xl md:text-2xl font-bold uppercase tracking-widest mb-6" style={{ color: "var(--text-primary)" }}>Contact</h2>
             <p className="leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-              If you have any questions about this Privacy Policy, please contact me at <a href="mailto:rouabah.zineedinee@gmail.com" className="underline hover:text-blue-400" style={{ color: "var(--text-primary)" }}>rouabah.zineedinee@gmail.com</a>.
+              If you have any questions about this Privacy Policy, please contact me at <a href="mailto:rayaneterki55@gmail.com" className="underline hover:text-blue-400" style={{ color: "var(--text-primary)" }}>rayaneterki55@gmail.com</a>.
             </p>
           </section>
         </div>

@@ -21,7 +21,7 @@ export default function ImpactMarquee() {
                 className="text-[8vw] md:text-[5vw] font-black uppercase tracking-tighter"
                 style={{ color: "var(--bg-base)" }}
               >
-                ROUABAH ZINE EDDINE
+                RAYANE TERKI
               </span>
               <div className="w-10 h-10 md:w-14 md:h-14 bg-blue-600 rounded-full flex items-center justify-center">
                 <div className="w-3 h-3 md:w-5 md:h-5 rounded-full" style={{ backgroundColor: "var(--text-primary)" }} />
@@ -30,7 +30,7 @@ export default function ImpactMarquee() {
                 className="text-[8vw] md:text-[5vw] font-black text-transparent uppercase tracking-tighter"
                 style={{ WebkitTextStroke: "2px var(--bg-base)" }}
               >
-                SOFTWARE ENGINEER
+                FULL-STACK ENGINEER
               </span>
               <div className="w-10 h-10 md:w-14 md:h-14 border-4 rounded-full" style={{ borderColor: "var(--bg-base)" }} />
             </div>

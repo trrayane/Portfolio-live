@@ -5,34 +5,34 @@ import { Metadata } from "next";
 import { Server, Layout, Search, Shield, Zap, ArrowUpRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Services | Web Development & System Architecture",
-  description: "Explore the range of professional services offered by Rouabah Zine Eddine, including custom web development, backend architecture, and SEO optimization.",
+  title: "Services | Backend, AI Integration & Security",
+  description: "Explore the range of professional services offered by Rayane Terki, including backend architecture, API development, AI/LLM integration, and application security.",
 };
 
 const services = [
   {
-    title: "Web Application Development",
-    description: "Building high-performance, scalable web applications using Next.js and React. Focused on clean code and exceptional user experience.",
-    icon: Layout,
-    features: ["Custom React Components", "Next.js App Router", "Tailwind CSS Styling", "State Management"],
-  },
-  {
-    title: "Backend & Database Architecture",
-    description: "Designing resilient backend infrastructures and database schemas. Expertise in PostgreSQL, Laravel, and Prisma.",
+    title: "Backend & API Development",
+    description: "Designing resilient backend systems, APIs, and distributed architectures using Node.js, TypeScript, and Python. Built for scale and real production traffic.",
     icon: Server,
-    features: ["Database Schema Design", "API Development", "Authentication Systems", "Database Administration"],
+    features: ["REST & API Development", "Database Architecture", "Distributed Systems", "Authentication Systems"],
   },
   {
-    title: "Systems & Networking",
-    description: "Linux-based systems knowledge to keep your digital infrastructure reliable and well-configured, from Docker containers to server basics.",
+    title: "AI & LLM Integration",
+    description: "Integrating machine learning and large language model features into existing products — from chat interfaces to automated pipelines.",
+    icon: Layout,
+    features: ["LLM Feature Integration", "ML Model Integration", "AI-Powered Workflows", "Prompt & Pipeline Design"],
+  },
+  {
+    title: "Application Security",
+    description: "Building with security in mind from day one — hardening APIs, auth flows, and infrastructure against real-world threats.",
     icon: Shield,
-    features: ["Linux Environments", "Docker", "Deployment Pipelines", "Infrastructure Basics"],
+    features: ["Secure Architecture Review", "Auth & Access Control", "Docker & Deployment Hardening", "Vulnerability Remediation"],
   },
   {
-    title: "SEO Optimization",
-    description: "Implementing technical SEO best practices to maximize search engine visibility and improve brand authority.",
+    title: "Full-Stack Web Development",
+    description: "End-to-end web application development with modern frontend frameworks paired with production-grade backends.",
     icon: Search,
-    features: ["Schema Markup", "Core Web Vitals", "Sitemap & Robots.txt", "Performance Optimization"],
+    features: ["Next.js & React", "Full-Stack Architecture", "Performance Optimization", "Deployment Pipelines"],
   },
 ];
 

@@ -18,7 +18,7 @@ type BreadcrumbItem = {
 };
 
 export default function BreadcrumbSchema({ items }: { items: BreadcrumbItem[] }) {
-  const siteUrl = "https://zineddine.vercel.app";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio-live-trrayane.vercel.app";
 
   const schema = {
     "@context": "https://schema.org",

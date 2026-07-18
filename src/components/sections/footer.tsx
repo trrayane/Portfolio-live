@@ -3,16 +3,12 @@
 import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Github, Linkedin, Send, Loader2 } from "lucide-react";
-import { FaReddit, FaDiscord, FaWhatsapp } from "react-icons/fa6";
+import { Github, Mail, Send, Loader2 } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/xCyberpunkx", label: "Github" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/zine-eddine-rouabah/", label: "LinkedIn" },
-  { icon: FaReddit, href: "https://www.reddit.com/user/No_Investigator4261/", label: "Reddit" },
-  { icon: FaDiscord, href: "https://discord.com/users/557172887799463937", label: "Discord" },
-  { icon: FaWhatsapp, href: "https://wa.me/213540166358", label: "WhatsApp" },
+  { icon: Github, href: "https://github.com/trrayane", label: "Github" },
+  { icon: Mail, href: "mailto:rayaneterki55@gmail.com", label: "Email" },
 ];
 
 export default function Footer() {
@@ -52,7 +48,7 @@ export default function Footer() {
           from_name: formData.name,
           reply_to: formData.email,
           message: formData.message,
-          to_email: "rouabah.zineedinee@gmail.com",
+          to_email: "rayaneterki55@gmail.com",
         },
         publicKey
       );
@@ -111,7 +107,6 @@ export default function Footer() {
               <div className="space-y-6">
                 <p className="text-[10px] font-bold uppercase tracking-widest" style={{ color: "var(--text-tertiary)" }}>Resources</p>
                 <ul className="space-y-4">
-                  <li><Link href="/blog" className="text-xs font-bold uppercase tracking-widest hover:text-blue-400 transition-colors" style={{ color: "var(--text-muted)" }}>Technical Blog</Link></li>
                   <li><Link href="/learning-journey" className="text-xs font-bold uppercase tracking-widest hover:text-blue-400 transition-colors" style={{ color: "var(--text-muted)" }}>Learning Journey</Link></li>
                   <li><Link href="/#contact" className="text-xs font-bold uppercase tracking-widest hover:text-blue-400 transition-colors" style={{ color: "var(--text-muted)" }}>Get In Touch</Link></li>
                 </ul>
@@ -231,7 +226,7 @@ export default function Footer() {
           style={{ borderColor: "var(--border-subtle)" }}
         >
           <p className="text-[9px] font-technical uppercase tracking-[0.4em]" style={{ color: "var(--text-quaternary)" }}>
-            © 2026 ROUABAH ZINE EDDINE // ALL RIGHTS RESERVED
+            © 2026 RAYANE TERKI // ALL RIGHTS RESERVED
           </p>
           <div className="flex gap-8">
             <p className="text-[9px] font-technical uppercase tracking-[0.4em]" style={{ color: "var(--text-quaternary)" }}>BUILT FOR PERFORMANCE // NODE_DZ</p>

@@ -23,19 +23,19 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://zineddine.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio-live-trrayane.vercel.app"),
   title: {
-    default: "Rouabah Zine Eddine | Software Engineer",
+    default: "Rayane Terki | Full-Stack Engineer",
     template: "%s",
   },
-  description: "Official portfolio of Rouabah Zine Eddine, a software engineer based in Algeria specializing in Next.js, Laravel, and full-stack web development.",
-  keywords: ["Rouabah Zine Eddine", "Software Engineer Algeria", "Full Stack Developer Blida", "Next.js Developer", "Laravel Developer", "SnovaTech"],
-  authors: [{ name: "Rouabah Zine Eddine" }],
+  description: "Official portfolio of Rayane Terki, a Full-Stack Engineer focused on backend systems, AI integration, and security — building scalable apps for real production environments.",
+  keywords: ["Rayane Terki", "Full-Stack Engineer", "Backend Developer", "Security Enthusiast", "AI Integrations Developer", "Node.js Developer", "TypeScript Developer", "Python Developer"],
+  authors: [{ name: "Rayane Terki" }],
   openGraph: {
-    title: "Rouabah Zine Eddine | Software Engineer",
-    description: "Building reliable, well-structured web applications.",
-    url: "https://zineddine.vercel.app",
-    siteName: "Rouabah Zine Eddine Portfolio",
+    title: "Rayane Terki | Full-Stack Engineer",
+    description: "Building scalable backend systems, AI integrations, and secure production applications.",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio-live-trrayane.vercel.app",
+    siteName: "Rayane Terki Portfolio",
     locale: "en_US",
     type: "website",
     images: [
@@ -43,18 +43,18 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Rouabah Zine Eddine - Software Engineer",
+        alt: "Rayane Terki - Full-Stack Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rouabah Zine Eddine | Software Engineer",
-    description: "Full-stack web development focused on performance and reliability.",
+    title: "Rayane Terki | Full-Stack Engineer",
+    description: "Full-stack development focused on backend systems, AI integration, and security.",
     images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://zineddine.vercel.app",
+    canonical: process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio-live-trrayane.vercel.app",
   },
   robots: {
     index: true,
@@ -67,9 +67,8 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: "UcnkBGrdaj_TDDrWUE5Lbqx7xIU_lSOzZ2xtwHTg65c",
-  },
+  // TODO: replace with Rayane's own Google Search Console verification code
+  // once the site is verified under his account.
 };
 
 export default function RootLayout({

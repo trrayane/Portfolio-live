@@ -4,10 +4,10 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion, useInView, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 const PROBE_LINES = [
-  { label: "IDENTITY", value: "ROUABAH_ZINE_EDDINE" },
-  { label: "ROLE", value: "SOFTWARE_ENGINEER" },
+  { label: "IDENTITY", value: "RAYANE_TERKI" },
+  { label: "ROLE", value: "FULL_STACK_ENGINEER" },
   { label: "LOCATION", value: "36.4701°N, 2.8288°E // NODE_DZ" },
-  { label: "CORE_MODULE", value: "FULL_STACK // CLOUD" },
+  { label: "CORE_MODULE", value: "BACKEND // AI // SECURITY" },
   { label: "OPTIMIZATION", value: "OPTIMIZED_LOGIC" },
   { label: "STATUS", value: "ONLINE" },
 ];
@@ -125,16 +125,16 @@ export default function SubHeroSection() {
               className="text-2xl md:text-4xl font-technical tracking-tight leading-[1.25] max-w-3xl"
               style={{ color: "var(--text-secondary)" }}
             >
-              Rouabah Zine Eddine is a{" "}
-              <span className="font-black uppercase" style={{ color: "var(--text-primary)" }}>software engineering professional</span> focused on
-              building <span className="font-black uppercase" style={{ color: "var(--text-primary)" }}>reliable, well-structured web applications</span>{" "}
+              Rayane Terki is a{" "}
+              <span className="font-black uppercase" style={{ color: "var(--text-primary)" }}>full-stack engineer</span> focused on
+              building <span className="font-black uppercase" style={{ color: "var(--text-primary)" }}>scalable backend systems, AI integrations, and secure production applications</span>{" "}
               and continuously deepening his understanding of computer systems and networks.
             </motion.p>
 
             <div className="flex flex-wrap gap-12">
               <div className="flex flex-col">
                 <span className="text-[10px] font-technical uppercase tracking-[0.5em] mb-3" style={{ color: "var(--text-tertiary)" }}>Core_Focus</span>
-                <span className="font-black uppercase text-xl" style={{ color: "var(--text-primary)" }}>FULL_STACK // CLOUD</span>
+                <span className="font-black uppercase text-xl" style={{ color: "var(--text-primary)" }}>BACKEND // AI // SECURITY</span>
               </div>
               <div className="w-[1px] h-12 hidden sm:block" style={{ backgroundColor: "var(--border-strong)" }} />
               <div className="flex flex-col">
@@ -152,7 +152,7 @@ export default function SubHeroSection() {
               <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-400/40 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
               <span className="font-technical text-[8px] uppercase tracking-[0.5em] block mb-4" style={{ color: "var(--text-tertiary)" }}>Brief_01</span>
               <p className="font-technical text-[10px] uppercase tracking-widest leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-                4+ years of delivering enterprise-grade solutions across healthcare, renewable energy, and fintech sectors. Focused on performance at scale.
+                2+ years delivering 20+ production projects across backend systems, AI integrations, and security-focused applications. Focused on performance at scale.
               </p>
             </div>
           </div>

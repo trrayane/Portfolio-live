@@ -10,52 +10,45 @@
  * <JsonLd /> import (or replace that file's contents with this).
  */
 export default function JsonLd() {
-  const siteUrl = "https://zineddine.vercel.app";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio-live-trrayane.vercel.app";
 
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Rouabah Zine Eddine",
+    name: "Rayane Terki",
     url: siteUrl,
-    jobTitle: "Software Engineer",
+    jobTitle: "Full-Stack Engineer",
     image: `${siteUrl}/og-image.png`,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Blida",
-      addressCountry: "DZ",
-    },
+    email: "rayaneterki55@gmail.com",
     sameAs: [
-      "https://github.com/xCyberpunkx",
-      "https://www.linkedin.com/in/zine-eddine-rouabah/",
-      "https://www.reddit.com/user/No_Investigator4261/",
-      "https://discord.com/users/557172887799463937",
-      "https://wa.me/213540166358",
+      "https://github.com/trrayane",
     ],
     knowsAbout: [
-      "Next.js",
-      "Laravel",
+      "Node.js",
       "TypeScript",
+      "Python",
       "Full-Stack Web Development",
-      "PostgreSQL",
-      "React",
+      "Backend Architecture",
+      "AI & LLM Integration",
+      "Security",
     ],
   };
 
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Rouabah Zine Eddine Portfolio",
+    name: "Rayane Terki Portfolio",
     url: siteUrl,
     inLanguage: "en",
     publisher: {
       "@type": "Person",
-      name: "Rouabah Zine Eddine",
+      name: "Rayane Terki",
     },
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: `${siteUrl}/blog?q={search_term_string}`,
+        urlTemplate: `${siteUrl}/projects?q={search_term_string}`,
       },
       "query-input": "required name=search_term_string",
     },
@@ -66,13 +59,12 @@ export default function JsonLd() {
   const siteNavigationSchema = {
     "@context": "https://schema.org",
     "@type": "SiteNavigationElement",
-    name: ["Home", "About", "Services", "Projects", "Blog"],
+    name: ["Home", "About", "Services", "Projects"],
     url: [
       siteUrl,
       `${siteUrl}/about`,
       `${siteUrl}/services`,
       `${siteUrl}/projects`,
-      `${siteUrl}/blog`,
     ],
   };
 

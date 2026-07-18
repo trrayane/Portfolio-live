@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const BOOT_LINES = [
-  "MOUNTING /home/rouabah...",
+  "MOUNTING /home/rayane...",
   "LOADING PORTFOLIO.SYS...",
   "LINKING NODE_DZ...",
   "SYSTEM_ONLINE",
@@ -57,9 +57,9 @@ export default function SplashScreen() {
           <div className="relative flex flex-col items-center">
             <div className="flex flex-col items-center gap-2 mb-16">
               <h1 className="text-3xl md:text-5xl font-extralight text-white/95 tracking-[0.6em] uppercase">
-                ROUABAH
+                RAYANE
               </h1>
-              <span className="text-[10px] text-white/30 tracking-[0.4em] uppercase">ZINE_EDDINE</span>
+              <span className="text-[10px] text-white/30 tracking-[0.4em] uppercase">TERKI</span>
             </div>
 
             {/* Terminal boot log */}

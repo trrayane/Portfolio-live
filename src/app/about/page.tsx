@@ -4,66 +4,43 @@ import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Rouabah Zine Eddine | Software Engineer",
-  description: "Learn more about Rouabah Zine Eddine's professional journey, real work experience, education, and technical expertise in web development.",
+  title: "About Rayane Terki | Full-Stack Engineer",
+  description: "Learn more about Rayane Terki's professional journey, technical expertise, and focus on backend systems, AI integration, and security.",
 };
 
-// Synced from LinkedIn work history (last updated: session — July 2026)
 const journey = [
   {
-    year: "APR 2026 — PRES",
-    role: "Software Engineer",
-    company: "Script Shock",
-    status: "ACTIVE",
-    description: "Working across front-end development and database administration, building and maintaining features on-site as part of the engineering team.",
-  },
-  {
-    year: "APR 2024 — PRES",
-    role: "Software Engineer",
+    year: "2024 — PRES",
+    role: "Full-Stack Engineer",
     company: "Freelance",
     status: "ACTIVE",
-    description: "Building and maintaining websites for independent clients — from PostgreSQL-backed data layers and Prisma ORM integration to full deployment.",
+    description: "Building and maintaining production applications for independent clients — from backend architecture and APIs to AI-integrated features and full deployment.",
   },
   {
-    year: "FEB 2025 — FEB 2026",
-    role: "Frontend Web Developer",
-    company: "SnovaTech",
+    year: "2023 — 2024",
+    role: "Backend Developer",
+    company: "Independent Projects",
     status: "COMPLETED",
-    description: "Delivered front-end features for a solar simulation platform using Next.js, remote, improving UI consistency and performance across the app.",
-  },
-  {
-    year: "FEB 2024 — JAN 2025",
-    role: "Web Developer",
-    company: "Kara Automobile",
-    status: "COMPLETED",
-    description: "On-site web development role supporting the company's digital presence and internal documentation workflows.",
-  },
-  {
-    year: "JUL 2023 — SEP 2024",
-    role: "Full-Stack Developer",
-    company: "Ultra Light",
-    status: "COMPLETED",
-    description: "Led development of Ultra Light's corporate website using Laravel — architecting a custom web application focused on performance, scalability, and security.",
+    description: "Delivered backend systems and distributed services using Node.js, TypeScript, and Python, with a focus on security and reliability.",
   },
 ];
 
 const education = {
-  school: "INSFP AIG Khalil Zyat",
-  degree: "Advanced Technician Degree, Web Development",
-  date: "SEP 2023 — MAR 2025",
-  skills: "Web Development, Software Architecture, +2",
+  school: "Self-Directed & Continuous Learning",
+  degree: "Software Engineering, Backend Systems & Security",
+  date: "ONGOING",
+  skills: "Backend Architecture, APIs, Distributed Systems, AI/LLM Integration",
 };
 
 const certifications = [
-  { name: "Responsive Web Design", issuer: "freeCodeCamp", date: "MAR 2026" },
-  { name: "Docker Foundations Professional Certificate", issuer: "Docker, Inc.", date: "JUN 2025" },
+  { name: "Docker Foundations Professional Certificate", issuer: "Docker, Inc.", date: "2025" },
 ];
 
 const expertise = [
-  { label: "Frontend", stack: "Next.js, React, Tailwind CSS, Framer Motion" },
-  { label: "Backend", stack: "Laravel, PostgreSQL, Prisma, Database Administration" },
-  { label: "Systems", stack: "Linux (Arch), Docker, Networking" },
-  { label: "Strategy", stack: "SEO Optimization, Performance Tuning, UI/UX" },
+  { label: "Backend", stack: "Node.js, TypeScript, Python, APIs" },
+  { label: "AI Integration", stack: "LLM Features, ML Integration" },
+  { label: "Security", stack: "Application Security, Secure Architecture" },
+  { label: "Systems", stack: "Distributed Systems, Docker, Linux" },
 ];
 
 const STATUS_STYLES: Record<string, string> = {
@@ -86,7 +63,7 @@ export default function AboutPage() {
             About <span className="text-transparent" style={{ WebkitTextStroke: "1px var(--border-strong)" }}>The Engineer</span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl font-light leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-            A software engineering professional focused on building reliable, well-structured web applications and continuously deepening his understanding of computer systems and networks.
+            A Full-Stack Engineer focused on backend systems, AI integration, and security — building scalable apps for real production environments.
           </p>
         </header>
 
@@ -97,7 +74,7 @@ export default function AboutPage() {
               In an era of rapidly evolving technology, my approach remains grounded in the fundamentals of computer science and system architecture. I believe that true innovation stems from a deep understanding of how systems interact at every level — from the application layer down to the network infrastructure.
             </p>
             <p className="leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-              My work is characterized by a commitment to precision, scalability, and resilience. Whether I&apos;m architecting a client-facing web application or optimizing a data pipeline, my goal is always to deliver solutions that are not just functional, but enduring.
+              My work is characterized by a commitment to precision, scalability, and security. Whether I&apos;m architecting backend infrastructure, integrating AI and LLM features, or hardening an application, my goal is always to deliver solutions that are not just functional, but production-ready.
             </p>
           </section>
 

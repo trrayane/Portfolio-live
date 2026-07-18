@@ -19,7 +19,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.label,
-      item: `https://zineddine.vercel.app${item.href}`,
+      item: `${process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio-live-trrayane.vercel.app"}${item.href}`,
     })),
   }
 

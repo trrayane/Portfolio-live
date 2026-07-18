@@ -188,7 +188,7 @@ export default function ProjectsGrid({ projects }: { projects: Project[] }) {
                       className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest hover:text-blue-400 transition-colors"
                       style={{ color: "var(--text-primary)" }}
                     >
-                      <ExternalLink size={16} /> Live Demo
+                      <ExternalLink size={16} /> {project.link === project.github ? "View Repo" : "Live Demo"}
                     </a>
                   </div>
 

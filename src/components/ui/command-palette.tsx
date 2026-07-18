@@ -10,12 +10,10 @@ import {
   User,
   Wrench,
   FolderGit2,
-  Newspaper,
   Gauge,
   Mail,
   Download,
   Github,
-  Linkedin,
   CornerDownLeft,
   ArrowUp,
   ArrowDown,
@@ -77,14 +75,6 @@ function buildCommands(): CommandItem[] {
       run: ({ router }) => router.push("/projects"),
     },
     {
-      id: "blog",
-      label: "Blog",
-      hint: "cd /blog",
-      keywords: ["blog", "cd", "posts", "writing"],
-      icon: Newspaper,
-      run: ({ router }) => router.push("/blog"),
-    },
-    {
       id: "contact",
       label: "Contact",
       hint: "open /contact",
@@ -119,18 +109,10 @@ function buildCommands(): CommandItem[] {
     {
       id: "github",
       label: "Open GitHub",
-      hint: "open github.com/xCyberpunkx",
+      hint: "open github.com/trrayane",
       keywords: ["github", "code", "source", "repos"],
       icon: Github,
-      run: () => window.open("https://github.com/xCyberpunkx", "_blank"),
-    },
-    {
-      id: "linkedin",
-      label: "Open LinkedIn",
-      hint: "open linkedin.com/in/zine-eddine-rouabah",
-      keywords: ["linkedin", "profile", "network"],
-      icon: Linkedin,
-      run: () => window.open("https://www.linkedin.com/in/zine-eddine-rouabah/", "_blank"),
+      run: () => window.open("https://github.com/trrayane", "_blank"),
     },
   ];
 }

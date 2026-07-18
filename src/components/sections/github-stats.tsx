@@ -11,7 +11,7 @@ import { GitCommitHorizontal, GitFork, Star, BookMarked } from "lucide-react";
  * Usage inside system-stack.tsx:
  *   import GithubStats from "@/components/sections/github-stats";
  *   ...
- *   <GithubStats username="xCyberpunkx" />
+ *   <GithubStats username="trrayane" />
  *
  * Drop it either in place of the NEOFETCH_INFO "repos" row, or as its own
  * card beneath the terminal identity block.

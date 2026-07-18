@@ -5,7 +5,7 @@ import { MetadataRoute } from "next";
  * Save as app/robots.ts.
  */
 export default function robots(): MetadataRoute.Robots {
-  const siteUrl = "https://zineddine.vercel.app";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio-live-trrayane.vercel.app";
 
   return {
     rules: {

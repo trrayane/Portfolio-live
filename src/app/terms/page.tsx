@@ -4,8 +4,8 @@ import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Rouabah Zine Eddine",
-  description: "Read the terms and conditions for using the official portfolio website of Rouabah Zine Eddine.",
+  title: "Terms of Service | Rayane Terki",
+  description: "Read the terms and conditions for using the official portfolio website of Rayane Terki.",
 };
 
 export default function TermsPage() {
@@ -33,7 +33,7 @@ export default function TermsPage() {
           <section className="mb-12">
             <h2 className="text-xl md:text-2xl font-bold uppercase tracking-widest mb-6" style={{ color: "var(--text-primary)" }}>2. Use License</h2>
             <p className="leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-              Permission is granted to temporarily download one copy of the materials (information or software) on Rouabah Zine Eddine's website for personal, non-commercial transitory viewing only.
+              Permission is granted to temporarily download one copy of the materials (information or software) on Rayane Terki's website for personal, non-commercial transitory viewing only.
             </p>
           </section>
 

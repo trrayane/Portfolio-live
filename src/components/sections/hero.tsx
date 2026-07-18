@@ -2,8 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
-import { FaReddit, FaDiscord, FaWhatsapp } from "react-icons/fa6";
+import { ArrowDown, Github, Mail } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -12,15 +11,11 @@ if (typeof window !== "undefined") {
 }
 
 const SOCIALS = [
-  { icon: Github, href: "https://github.com/xCyberpunkx" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/zine-eddine-rouabah/" },
-  { icon: FaReddit, href: "https://www.reddit.com/user/No_Investigator4261/" },
-  { icon: FaDiscord, href: "https://discord.com/users/557172887799463937" },
-  { icon: FaWhatsapp, href: "https://wa.me/213540166358" },
-  { icon: Mail, href: "mailto:rouabah.zineedinee@gmail.com" },
+  { icon: Github, href: "https://github.com/trrayane" },
+  { icon: Mail, href: "mailto:rayaneterki55@gmail.com" },
 ];
 
-const ROLES = ["SOFTWARE ENGINEER", "SYSTEM ARCHITECT", "FULL-STACK BUILDER"];
+const ROLES = ["FULL-STACK ENGINEER", "BACKEND DEVELOPER", "AI INTEGRATIONS DEV"];
 const SCRAMBLE_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ_-/#01";
 const RING_COUNT = 7;
 
@@ -204,12 +199,12 @@ const HeroSection = () => {
           className="text-[14vw] sm:text-[12vw] md:text-[10vw] lg:text-[8vw] font-black leading-[0.8] uppercase tracking-tighter"
           style={{ color: "var(--text-primary)" }}
         >
-          ROUABAH<br />
+          RAYANE<br />
           <span
             className="text-transparent"
             style={{ WebkitTextStroke: "1px var(--text-tertiary)" }}
           >
-            ZINE_EDDINE
+            TERKI
           </span>
         </motion.h1>
 

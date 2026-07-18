@@ -6,65 +6,65 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, ExternalLink, Github, Terminal } from "lucide-react";
 
 const projects = [
-    {
-    title: "Forge Kit",
-    category: "Developer Tools • Open Source",
-    image: "/projects/white.png",
-    link: "https://v1-forge-staging.vercel.app/",
-    github: "https://github.com/xCyberpunkx/forge",
+  {
+    title: "Healy",
+    category: "Healthcare • Multi-Role Platform",
+    image: "/og-image.png",
+    link: "https://github.com/trrayane/Healy-Front",
+    github: "https://github.com/trrayane/Healy-Front",
     details:
-      "A free, open-source workspace for builders — generators, converters, formatters, and dev utilities under one fast, keyboard-friendly interface. Runs entirely in the browser, no sign-up, no tracking, no paywall.",
-    tech: ["React 19", "TypeScript"],
+      "Frontend of Healy, a multi-role medical platform (patient, doctor, pharmacist, caregiver, admin) with AI-assisted diagnosis, real-time messaging, and full appointment management.",
+    tech: ["React 18", "Vite", "Redux Toolkit", "Tailwind CSS", "Three.js"],
   },
   {
-    title: "DentalDZ",
-    category: "E-Commerce • Full Backend CMS",
-    image: "/projects/dentaldz.png",
-    link: "https://www.dentaldz.com/",
-    github: "#",
+    title: "Healy Mobile",
+    category: "Healthcare • Mobile App",
+    image: "/og-image.png",
+    link: "https://github.com/trrayane/Healy-Mobile",
+    github: "https://github.com/trrayane/Healy-Mobile",
     details:
-      "A complete online store for dental equipment, including product catalog management, ordering, and a custom admin CMS behind the scenes.",
-    tech: ["React", "Supabase"],
-  },
-    {
-    title: "STEREO MIND",
-    category: "Productivity • Open Source",
-    image: "/projects/stereo-mind.png",
-    link: "https://stero-mind.vercel.app/",
-    github: "#",
-    details:
-      "A productivity tool focused on simplicity — tracking learning, tasks, and goals without the friction of complex features.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+      "React Native / Expo companion app for the Healy platform, bringing the same patient-doctor workflow to mobile.",
+    tech: ["React Native", "Expo", "Expo Router"],
   },
   {
-    title: "Healthcare System",
-    category: "Healthcare Software",
-    image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=2070&auto=format&fit=crop",
-    link: "https://ramdani.vercel.app/",
-    github: "https://github.com/xCyberpunkx/dental-backend",
+    title: "JusticePath",
+    category: "LegalTech • AI Assistant",
+    image: "/og-image.png",
+    link: "https://github.com/trrayane/JusticePath-front",
+    github: "https://github.com/trrayane/JusticePath-front",
     details:
-      "A comprehensive dental clinic management system handling appointment scheduling, patient electronic health records, and automated billing.",
-    tech: ["Next.js", "PostgreSQL", "Tailwind CSS", "Drizzle ORM"],
+      "Frontend of an intelligent legal-assistance platform for Algerian citizens, with a rich document editor and smooth scroll-driven UI.",
+    tech: ["React 19", "TypeScript", "Vite", "shadcn/ui", "Framer Motion"],
   },
   {
-    title: "Groupe Gadi",
-    category: "Static Website • Custom CMS Editor",
-    image: "/projects/gadi.png",
-    link: "https://www.groupegadi.com/",
-    github: "#",
+    title: "SummarAI",
+    category: "AI / LLM Tooling",
+    image: "/projects/summarai.png",
+    link: "https://github.com/trrayane/SummarAI",
+    github: "https://github.com/trrayane/SummarAI",
     details:
-      "A static-first corporate site paired with a custom backend inline editor, letting the client update page content directly.",
-    tech: ["Next.js", "Custom CMS"],
+      "Gemini + LangChain summarization engine — turns text, files, and web pages into clean, streamed summaries via a FastAPI backend.",
+    tech: ["Python", "FastAPI", "LangChain", "Gemini"],
   },
   {
-    title: "Safouane Mokhtefi",
-    category: "Portfolio • Graphic Design",
-    image: "/projects/safouane-portfolio.png",
-    link: "https://mokhtefi-safwan.vercel.app/",
-    github: "#",
+    title: "AC Collection",
+    category: "E-Commerce • Full Stack",
+    image: "/projects/ac-collection.png",
+    link: "https://ac-collection.vercel.app/",
+    github: "https://github.com/trrayane/AC-COOLECTION",
     details:
-      "A visually striking portfolio for a graphic designer, built as a digital canvas that lets the work speak through minimalist design.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+      "Bilingual (EN/AR, full RTL) e-commerce store for custom-printed clothing in Algeria — live design customization studio, Cash on Delivery checkout across all 58 wilayas.",
+    tech: ["React", "Vite", "Express", "Sequelize", "PostgreSQL"],
+  },
+  {
+    title: "Jingle AI",
+    category: "AI Audio • Hackathon Project",
+    image: "/og-image.png",
+    link: "https://github.com/trrayane/Hackiwha3.0",
+    github: "https://github.com/trrayane/Hackiwha3.0",
+    details:
+      "Turns a short brand brief into a fully produced audio jingle — Gemini writes lyrics and performs vocals, MusicGen composes the instrumental, mixed automatically into a finished track.",
+    tech: ["FastAPI", "React", "Vite", "PostgreSQL", "Gemini TTS"],
   },
 ];
 
@@ -276,9 +276,10 @@ export default function MyProjects() {
                       className="flex-1 flex items-center justify-center gap-2 py-3.5 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-blue-500 hover:text-white transition-all duration-300"
                       style={{ backgroundColor: "var(--text-primary)", color: "var(--bg-base)" }}
                     >
-                      Live Demo <ExternalLink size={14} />
+                      {active.link === active.github ? "View Repo" : "Live Demo"}{" "}
+                      {active.link === active.github ? <Github size={14} /> : <ExternalLink size={14} />}
                     </a>
-                    {active.github !== "#" && (
+                    {active.github !== "#" && active.github !== active.link && (
                       <a
                         href={active.github}
                         target="_blank"
