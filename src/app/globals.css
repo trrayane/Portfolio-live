@@ -1,0 +1,286 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: #09090b;
+  --color-foreground: #fafafa;
+
+  --color-card: #18181b;
+  --color-card-foreground: #fafafa;
+
+  --color-popover: #09090b;
+  --color-popover-foreground: #fafafa;
+
+  --color-primary: #fafafa;
+  --color-primary-foreground: #09090b;
+
+  --color-secondary: #18181b;
+  --color-secondary-foreground: #fafafa;
+
+  --color-muted: #18181b;
+  --color-muted-foreground: #a1a1aa;
+
+  --color-accent: #fafafa;
+  --color-accent-foreground: #09090b;
+
+  --color-destructive: #fafafa;
+  --color-destructive-foreground: #09090b;
+
+  --color-border: #27272a;
+  --color-input: #27272a;
+  --color-ring: #fafafa;
+
+  --color-deep-midnight: #09090b;
+  --color-off-white: #fafafa;
+  --color-rich-black: #09090b;
+  --color-muted-gray: #71717a;
+
+  --font-sans: var(--font-jakarta), "Plus Jakarta Sans", sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", monospace;
+  --font-display: var(--font-jakarta), "Plus Jakarta Sans", sans-serif;
+  --font-technical: var(--font-jetbrains-mono), "JetBrains Mono", monospace;
+
+  --radius-lg: 0.5rem;
+  --radius-md: 0.25rem;
+  --radius-sm: 0.125rem;
+}
+/* ============================================
+   THEME TOKENS — add this block to globals.css
+   (keep everything else in your file as-is)
+   ============================================ */
+
+:root,
+[data-theme="dark"] {
+  --bg-base: #09090b;           /* zinc-950, page background */
+  --bg-surface: rgba(255, 255, 255, 0.03);   /* cards / panels */
+  --bg-surface-strong: rgba(255, 255, 255, 0.06);
+  --bg-surface-hover: rgba(255, 255, 255, 0.06);
+  --bg-toggle-track: rgba(255, 255, 255, 0.06);
+  --bg-chrome: rgba(255, 255, 255, 0.02); /* terminal window title bars */
+
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-muted: rgba(255, 255, 255, 0.55);
+  --text-tertiary: rgba(255, 255, 255, 0.4);
+  --text-quaternary: rgba(255, 255, 255, 0.2);
+  --text-faint: rgba(255, 255, 255, 0.12);
+
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --border-default: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.2);
+
+  --accent: #3b82f6;            /* blue-500 — unchanged, as requested */
+  --accent-soft: rgba(59, 130, 246, 0.1);
+
+  --shadow-elevated: 0 0 60px rgba(59, 130, 246, 0.35);
+  --shadow-card: none;
+
+  --grain-opacity: 0.05;
+  --scan-opacity: 1;
+  --card-radius: 0.75rem;
+}
+
+[data-theme="light"] {
+  --bg-base: #ffffff;
+  --bg-surface: #f6f7f9;
+  --bg-surface-strong: #eef0f3;
+  --bg-surface-hover: #eeeef1;
+  --bg-toggle-track: rgba(10, 10, 10, 0.06);
+  --bg-chrome: #f0f1f4;
+
+  --text-primary: #0a0a0a;
+  --text-secondary: rgba(10, 10, 10, 0.65);
+  --text-muted: rgba(10, 10, 10, 0.5);
+  --text-tertiary: rgba(10, 10, 10, 0.4);
+  --text-quaternary: rgba(10, 10, 10, 0.25);
+  --text-faint: rgba(10, 10, 10, 0.15);
+
+  --border-subtle: rgba(10, 10, 10, 0.08);
+  --border-default: rgba(10, 10, 10, 0.12);
+  --border-strong: rgba(10, 10, 10, 0.25);
+
+  --accent: #2563eb;            /* blue-600 — slightly deeper for contrast on white */
+  --accent-soft: rgba(37, 99, 235, 0.08);
+
+  --shadow-elevated: 0 8px 24px rgba(37, 99, 235, 0.12);
+  --shadow-card: 0 1px 2px rgba(10, 10, 10, 0.04), 0 1px 8px rgba(10, 10, 10, 0.03);
+
+  --grain-opacity: 0;
+  --scan-opacity: 0.35;
+  --card-radius: 0.375rem;
+}
+
+/* Prevent the color transition from looking like a flash-of-jank on first paint */
+html {
+  transition: background-color 0.4s ease;
+}
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Light mode drops the film-grain noise entirely — that texture belongs to
+   the dark "terminal" identity, not the light "blueprint" one. */
+.grain-overlay {
+  opacity: var(--grain-opacity) !important;
+}
+
+.animate-scan {
+  opacity: var(--scan-opacity);
+}
+
+[data-theme="light"] .glass-nav {
+  background: rgba(255, 255, 255, 0.75) !important;
+  border-bottom-color: var(--border-subtle) !important;
+}
+
+/* Terminal-style "traffic light" window chrome used across the site:
+   dark = console bar, light = clean card header with a hairline rule */
+[data-theme="light"] .terminal-chrome {
+  background: var(--bg-chrome);
+  border-color: var(--border-subtle);
+}
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-border);
+  }
+
+  :root {
+    --background: #09090b;
+    --foreground: #fafafa;
+    --card: #18181b;
+    --card-foreground: #fafafa;
+    --popover: #09090b;
+    --popover-foreground: #fafafa;
+    --primary: #fafafa;
+    --primary-foreground: #09090b;
+    --secondary: #18181b;
+    --secondary-foreground: #fafafa;
+    --muted: #18181b;
+    --muted-foreground: #a1a1aa;
+    --accent: #fafafa;
+    --accent-foreground: #09090b;
+    --destructive: #fafafa;
+    --destructive-foreground: #09090b;
+    --border: #27272a;
+    --input: #27272a;
+    --ring: #fafafa;
+    --radius: 0.5rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+    body {
+      background-color: var(--background);
+      color: var(--foreground);
+      font-family: var(--font-sans);
+      overflow-x: hidden;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      margin-bottom: 0.5em;
+    }
+
+  .font-technical {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  @media (min-width: 1400px) {
+    .container {
+      max-width: 1400px;
+    }
+  }
+
+  /* Mobile readability: keep technical labels from feeling cramped on small screens */
+  @media (max-width: 640px) {
+    .font-technical {
+      letter-spacing: 0.15em;
+    }
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .ease-expo {
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .glass-nav {
+    background: rgba(9, 9, 11, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .btn-primary-hover {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .btn-primary-hover:hover {
+    transform: translateY(-2px);
+    background-color: #fafafa;
+    color: #09090b;
+  }
+
+  .grid-pattern {
+    background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  @keyframes scan {
+    0% { top: 0%; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+  }
+
+  .animate-scan {
+    animation: scan 2s linear infinite;
+  }
+
+  /* Global Grain Overlay */
+  .grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+  }
+}
