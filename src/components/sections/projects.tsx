@@ -356,27 +356,27 @@ export default function MyProjects() {
               className="absolute inset-0 bg-black/70 backdrop-blur-sm"
               onClick={() => setMobileOpen(false)}
             />
-            <button
-              onClick={() => setMobileOpen(false)}
-              className="fixed top-4 right-4 z-[210] flex items-center justify-center w-10 h-10 rounded-full"
-              style={{ backgroundColor: "rgba(255,255,255,0.95)", color: "#0a0a0e", boxShadow: "0 4px 16px rgba(0,0,0,0.35)" }}
-              aria-label="Close"
-            >
-              <X size={20} strokeWidth={2.5} />
-            </button>
-
             <motion.div
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
               transition={{ type: "spring", damping: 32, stiffness: 320 }}
-              className="absolute inset-x-0 bottom-0 top-8 rounded-t-2xl overflow-hidden flex flex-col"
-              style={{ backgroundColor: "var(--bg-base)", boxShadow: "var(--shadow-elevated)" }}
+              className="absolute inset-x-0 bottom-0 rounded-t-2xl overflow-hidden flex flex-col"
+              style={{ top: "26%", backgroundColor: "var(--bg-base)", boxShadow: "var(--shadow-elevated)" }}
             >
               {/* Drag handle */}
               <div className="flex justify-center pt-3 pb-1 flex-shrink-0">
                 <span className="w-10 h-1 rounded-full" style={{ backgroundColor: "var(--border-strong)" }} />
               </div>
+
+              <button
+                onClick={() => setMobileOpen(false)}
+                className="absolute -top-5 right-4 z-10 flex items-center justify-center w-10 h-10 rounded-full"
+                style={{ backgroundColor: "rgba(255,255,255,0.95)", color: "#0a0a0e", boxShadow: "0 4px 16px rgba(0,0,0,0.35)" }}
+                aria-label="Close"
+              >
+                <X size={20} strokeWidth={2.5} />
+              </button>
 
               <div className="overflow-y-auto flex-1">
                 <div className="relative aspect-[16/10] w-full overflow-hidden" style={{ backgroundColor: "var(--bg-chrome)" }}>
@@ -424,12 +424,12 @@ export default function MyProjects() {
                     ))}
                   </div>
 
-                  <div className="flex gap-4 pt-2 pb-4">
+                  <div className="flex gap-3 pt-2 pb-4">
                     <a
                       href={active.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 py-3.5 rounded-full font-bold uppercase tracking-widest text-xs"
+                      className="flex-1 flex items-center justify-center gap-2 py-4 rounded-full font-bold uppercase tracking-widest text-xs"
                       style={{ backgroundColor: "var(--text-primary)", color: "var(--bg-base)" }}
                     >
                       {active.link === active.github ? "View Repo" : "Live Demo"}{" "}
@@ -440,10 +440,10 @@ export default function MyProjects() {
                         href={active.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 py-3.5 px-6 border rounded-full font-bold uppercase tracking-widest text-xs"
-                        style={{ borderColor: "var(--border-strong)", color: "var(--text-secondary)" }}
+                        className="flex-shrink-0 flex items-center justify-center w-14 h-14 border rounded-full"
+                        style={{ backgroundColor: "var(--bg-surface-strong)", borderColor: "var(--border-subtle)", color: "var(--text-secondary)" }}
                       >
-                        <Github size={14} />
+                        <Github size={18} />
                       </a>
                     )}
                   </div>
